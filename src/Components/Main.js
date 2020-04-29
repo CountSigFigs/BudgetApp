@@ -19,23 +19,24 @@ class Main extends Component {
     }
 
    updateBudget(amount){
-
-        let updatedBalance= parseInt(amount)- parseInt(this.state.expenses)    
+        let balance= parseInt(amount) - parseInt(this.state.expenses)
         this.setState({
             budget: amount,
-            balance: updatedBalance
+            balance: balance
         })
    }
 
    updateExpenses(amount){
 
     let total= parseInt(this.state.expenses) + parseInt(amount);
-    let totalBalance= this.state.balance - total
+    let balance= parseInt(this.state.budget) - total
+
     this.setState({
         expenses: total,
-        balance: totalBalance
+        balance: balance
     })
-}
+    }
+
     render (){
         return (
             <div>
