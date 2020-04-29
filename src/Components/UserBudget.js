@@ -6,20 +6,16 @@ class UserBudget extends Component {
     constructor (props){
         super(props)
         this.state={
-            budget: undefined
+            budget: undefined,
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit=this.handleSubmit.bind(this);
 
     }
 
     handleChange(event) {
         this.setState({budget: event.target.value});
-      }
 
-    handleSubmit(event) {
-        alert(this.state.budget);
-        event.preventDefault();
+
       }
 
     render() {
@@ -32,11 +28,11 @@ class UserBudget extends Component {
                         name="userBudget"
                         id="userBudget"
                         placeholder="4000"
-                        value={this.state.budget}
                         onChange={this.handleChange}
+                        value={this.state.budgetArea}
                     >
                     </Input>
-                    <Button className='mt-3' onClick={this.handleSubmit}>Add Budget</Button>
+                    <Button className='mt-3' onClick={()=>this.props.onClick(this.state.budget)}>Add Budget</Button>
                 </FormGroup>
             </Form>
         )

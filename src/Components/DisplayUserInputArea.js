@@ -9,7 +9,9 @@ function DisplayUserInputArea (props){
         <div className="container">
             <div className="row">
                  <div className="col-4 mb-2 userInput" >
-                    <UserBudget />
+                    <UserBudget 
+                        onClick={props.onClick}
+                    />
                 </div>
             </div>
             <div className="row">

@@ -12,9 +12,15 @@ class Main extends Component {
             expenses:0,
             balance:0
         }
+
+        this.updateBudget=this.updateBudget.bind(this)
     }
 
-   
+   updateBudget(amount){
+        this.setState({
+            budget: amount
+        })
+   }
 
     render (){
         return (
@@ -26,7 +32,7 @@ class Main extends Component {
                     balance={this.state.balance}  
                 />
                 <DisplayUserInputArea
-                    
+                    onClick={this.updateBudget}
                  />
             </div>
         )
