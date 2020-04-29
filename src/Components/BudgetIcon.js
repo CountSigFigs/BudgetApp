@@ -3,10 +3,10 @@ import React from 'react';
 
 function BudgetIcon (props){
     return (
-        <div className="col-4 col-md-2">
-            <i class="fas fa-money-bill-alt fa-2x"></i>
-            <h3>Budget</h3>
-            <span>{props.budget}</span>
+        <div className="col-4 col-lg-2">
+            <i className="fas fa-money-bill-alt fa-2x d-inline mr-1"></i>
+            <h3 className="d-inline">Budget</h3>
+            <span className="d-block icon text-center">{props.budget}</span>
         </div>
     )
 }

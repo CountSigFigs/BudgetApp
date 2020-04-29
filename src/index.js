@@ -9,7 +9,7 @@ import 'font-awesome/css/font-awesome.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App  style={{backgroundColor: '#e9ebee'}}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,18 @@
-.userInput{
-  border: solid 1px black;
+h1{
+  font-size: 64px;
+}
+
+h1,h3{
+  color: #375e97;
+  font-weight: bold;
 }
 
 
+.userInput{
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.icon{
+  font-size: 26px;
+}

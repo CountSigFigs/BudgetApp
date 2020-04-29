@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Title from './title';
 import DisplayIcons from './DisplayIcons';
 import DisplayUserInputArea from './DisplayUserInputArea';
 
@@ -40,7 +39,6 @@ class Main extends Component {
     render (){
         return (
             <div>
-                <Title />
                 <DisplayIcons 
                     budget={this.state.budget} 
                     expenses={this.state.expenses}  
