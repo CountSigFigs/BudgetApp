@@ -13,7 +13,9 @@ class Main extends Component {
             balance:0
         }
     }
-    
+
+   
+
     render (){
         return (
             <div>
@@ -23,7 +25,9 @@ class Main extends Component {
                     expenses={this.state.expenses}  
                     balance={this.state.balance}  
                 />
-                <DisplayUserInputArea />
+                <DisplayUserInputArea
+                    
+                 />
             </div>
         )
     }

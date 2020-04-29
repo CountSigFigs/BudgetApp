@@ -4,7 +4,7 @@ import UserExpenses from './UserExpenses';
 
 
 
-function DisplayUserInputArea (){
+function DisplayUserInputArea (props){
     return (
         <div className="container">
             <div className="row">
