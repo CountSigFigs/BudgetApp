@@ -4,13 +4,13 @@ import ExpenseIcon from './ExpenseIcon';
 import BalanceIcon from './BalanceIcon';
 
 
-function DisplayIcons (){
+function DisplayIcons (props){
     return (
         <div className="container">
             <div className="row mt-3 d-flex flex-row-reverse">
-                <BudgetIcon />
-                <ExpenseIcon />
-                <BalanceIcon />
+                <BalanceIcon balance={props.balance}/>
+                <ExpenseIcon expenses={props.expenses}/>
+                <BudgetIcon budget={props.budget} />
             </div>
         </div>
     )

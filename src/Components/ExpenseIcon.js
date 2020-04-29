@@ -1,11 +1,12 @@
 import React from 'react';
 
 
-function ExpenseIcon (){
+function ExpenseIcon (props){
     return (
-        <div className="col-2">
-            <h4>Expenses</h4>
-            <span>amount</span>
+        <div className="col-4 col-md-2">
+            <i class="fas fa-money-check fa-2x"></i>
+            <h3>Expenses</h3>
+            <span>{props.expenses}</span>
         </div>
     )
 }
