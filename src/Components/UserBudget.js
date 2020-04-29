@@ -14,8 +14,6 @@ class UserBudget extends Component {
 
     handleChange(event) {
         this.setState({budget: event.target.value});
-
-
       }
 
     render() {

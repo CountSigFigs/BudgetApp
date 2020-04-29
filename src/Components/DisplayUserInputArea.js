@@ -16,7 +16,9 @@ function DisplayUserInputArea (props){
             </div>
             <div className="row">
                 <div className="col-4 mt-2 userInput">
-                     <UserExpenses />
+                     <UserExpenses
+                        updateExpenses={props.updateExpenses} 
+                    />
                 </div>
             </div>
         </div>

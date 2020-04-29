@@ -10,7 +10,7 @@ function DisplayIcons (props){
             <div className="row mt-3 d-flex flex-row-reverse">
                 <BalanceIcon balance={props.balance}/>
                 <ExpenseIcon expenses={props.expenses}/>
-                <BudgetIcon budget={props.budget} />
+                <BudgetIcon budget={props.budget} balance={props.balance} expenses={props.expenses}/>
             </div>
         </div>
     )
