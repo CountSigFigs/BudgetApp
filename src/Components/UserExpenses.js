@@ -5,15 +5,24 @@ class UserExpenses extends Component {
     constructor(props){
         super(props)
         this.state={
-            expenses:undefined
+            expenses:undefined,
+            expenseArray:[]
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleExpenseArray= this.handleExpenseArray.bind(this);
     }
 
     handleChange(event) {
-        this.setState({expenses: event.target.value});
+        this.setState(
+            {expenses: event.target.value});
       }
+
+    handleExpenseArray(event){
+        this.setState({
+            expenseArray: event.target.value
+        })
+    }
 
     render() {
         return (
@@ -25,6 +34,8 @@ class UserExpenses extends Component {
                         name="userExpenseTitle"
                         id="userExpenseTitle"
                         placeholder="Student loan"
+                        onChange={this.handleExpenseArray}
+                        value={this.state.expensesArray}
                     >
                     </Input>
                 </FormGroup>
@@ -39,7 +50,7 @@ class UserExpenses extends Component {
                         value={this.state.expenses}
                     >
                     </Input>
-                    <Button className='mt-3' onClick={()=>this.props.updateExpenses(this.state.expenses)}>Add Expense</Button>
+                    <Button className='mt-3' onClick={()=>this.props.updateExpenses(this.state.expenseArray,this.state.expenses)}>Add Expense</Button>
                 </FormGroup>
             </Form>
         )

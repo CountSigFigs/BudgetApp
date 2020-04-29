@@ -3,7 +3,6 @@ import UserBudget from './UserBudget';
 import UserExpenses from './UserExpenses';
 
 
-
 function DisplayUserInputArea (props){
     return (
         <div className="container">
