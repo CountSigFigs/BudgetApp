@@ -16,21 +16,33 @@ class UserBudget extends Component {
         this.setState({budget: event.target.value});
       }
 
+    resetForm(){
+        this.setState({budget:''})
+        console.log(this.state.budget)
+    }
+
     render() {
         return (
-            <Form className="mt-3">
+            <Form className="mt-3" onSubmit={this.resetForm}>
                 <FormGroup>
                     <Label for="userBudget"><h4>Enter Budget</h4></Label>
                     <Input
                         type="text"
                         name="userBudget"
                         id="userBudget"
-                        placeholder="4000"
+                        placeholder='4000'
+                        value={this.state.budget}
                         onChange={this.handleChange}
-                        value={this.state.budgetArea}
                     >
                     </Input>
-                    <Button className='mt-3' onClick={()=>this.props.onClick(this.state.budget)}>Add Budget</Button>
+                    <Button 
+                        className='mt-3' 
+                        onClick={()=>{
+                            this.props.onClick(this.state.budget);
+                            this.resetForm()
+                            }}
+                    > 
+                    Add Budget</Button>
                 </FormGroup>
             </Form>
         )
