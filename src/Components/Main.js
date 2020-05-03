@@ -26,7 +26,7 @@ class Main extends Component {
         })
    }
 
-   updateExpenses(array,amount){
+   updateExpenses(item,amount){
 
     let total= parseInt(this.state.expenses) + parseInt(amount);
     let balance= parseInt(this.state.budget) - total
@@ -34,8 +34,9 @@ class Main extends Component {
     this.setState({
         expenses: total,
         balance: balance,
-        expenseArray: array
+        expenseArray: [...this.state.expenseArray,item]
     })
+    
     console.log(this.state.expenseArray)
     }
 

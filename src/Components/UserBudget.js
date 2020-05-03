@@ -23,7 +23,7 @@ class UserBudget extends Component {
 
     render() {
         return (
-            <Form className="mt-3" onSubmit={this.resetForm}>
+            <Form className="mt-3" >
                 <FormGroup>
                     <Label for="userBudget"><h4>Enter Budget</h4></Label>
                     <Input

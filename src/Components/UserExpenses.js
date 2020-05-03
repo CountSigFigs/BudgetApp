@@ -5,12 +5,12 @@ class UserExpenses extends Component {
     constructor(props){
         super(props)
         this.state={
-            expenses:undefined,
-            expenseArray:[]
+            expenses:'',
+            expenseItem:''
         }
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleExpenseArray= this.handleExpenseArray.bind(this);
+        this.handleExpenseItem= this.handleExpenseItem.bind(this);
     }
 
     handleChange(event) {
@@ -18,10 +18,17 @@ class UserExpenses extends Component {
             {expenses: event.target.value});
       }
 
-    handleExpenseArray(event){
+    handleExpenseItem(event){
         this.setState({
-            expenseArray: event.target.value
+            expenseItem: event.target.value
         })
+    }
+    resetForm(){
+        this.setState({
+            expenses:'',
+            expenseItem:''
+        })
+        console.log(this.state)
     }
 
     render() {
@@ -34,8 +41,8 @@ class UserExpenses extends Component {
                         name="userExpenseTitle"
                         id="userExpenseTitle"
                         placeholder="Student loan"
-                        onChange={this.handleExpenseArray}
-                        value={this.state.expensesArray}
+                        onChange={this.handleExpenseItem}
+                        value={this.state.expenseItem}
                     >
                     </Input>
                 </FormGroup>
@@ -45,12 +52,19 @@ class UserExpenses extends Component {
                         type="text"
                         name="userExpenseAmount"
                         id="userExpenseAmount"
-                        placeholder="4000"
+                        placeholder="200"
                         onChange={this.handleChange}
                         value={this.state.expenses}
                     >
                     </Input>
-                    <Button className='mt-3' onClick={()=>this.props.updateExpenses(this.state.expenseArray,this.state.expenses)}>Add Expense</Button>
+                    <Button 
+                        className='mt-3' 
+                        onClick={()=>{
+                            this.props.updateExpenses(this.state.expenseItem,this.state.expenses)
+                            this.resetForm()
+                                }
+                            }
+                        >Add Expense</Button>
                 </FormGroup>
             </Form>
         )
