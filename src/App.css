@@ -16,3 +16,7 @@ h1,h3{
 .icon{
   font-size: 26px;
 }
+
+.clickMe:hover{
+  cursor: pointer;
+}

@@ -1,20 +1,20 @@
 import React from 'react'
-import {Table, Button} from 'reactstrap'
+import {Table} from 'reactstrap'
 
-function ExpenseTable ({expenses}){
+function ExpenseTable (props){
 
     
-    const expenseList= expenses.map(item =>{
+    const expenseList= props.expenses.map(item =>{
         return (
             <tr>
-                    <td></td>
                     <td>{item.name}</td>
                     <td>{item.amount}</td>
-                    <td><Button className="btn">Remove</Button></td>
+                    <td><span onClick={()=>props.onClick(item)}><i class="fas fa-trash-alt clickMe"></i></span></td>
             </tr>
         )
     })
 
+   
     return(
         <div className='container'>
             <div className='row'>
@@ -23,7 +23,6 @@ function ExpenseTable ({expenses}){
                     <Table>
                         <thead>
                             <tr>
-                                <th></th>
                                 <th>Expense Name</th>
                                 <th>Expense Amount</th>
                                 <th></th>

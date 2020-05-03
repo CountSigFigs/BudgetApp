@@ -16,6 +16,7 @@ class Main extends Component {
 
         this.updateBudget=this.updateBudget.bind(this)
         this.updateExpenses=this.updateExpenses.bind(this)
+        this.handleDelete=this.handleDelete.bind(this)
 
     }
 
@@ -32,6 +33,7 @@ class Main extends Component {
     let total= parseInt(this.state.expenses) + parseInt(amount);
     let balance= parseInt(this.state.budget) - total
     
+    //creates newobject to be added to expense array
     let obj={
         name:item,
         amount: amount
@@ -43,9 +45,25 @@ class Main extends Component {
         expenseArray: [...this.state.expenseArray,obj]
     })
     
-    console.log(this.state.expenseArray)
     }
+    handleDelete(item){
+        //deletes from expenseArray
+        let newExpenseList= this.state.expenseArray;
+        let index = newExpenseList.indexOf(item);
+        newExpenseList.splice(index,1);
 
+        //updates expense and balance amounts
+        let newBalance= this.state.balance;
+        let newExpenses=this.state.expenses;
+        newBalance= parseInt(newBalance) + parseInt(item.amount);
+        newExpenses= newExpenses-item.amount;
+
+        this.setState({
+            expenseArray: newExpenseList,
+            balance: newBalance,
+            expenses: newExpenses
+        })
+    }
     render (){
         return (
             <div className='container-fluid'>
@@ -63,7 +81,7 @@ class Main extends Component {
                             expenses={this.state.expenses}  
                             balance={this.state.balance}  
                         />
-                        <ExpenseTable expenses={this.state.expenseArray}/>
+                        <ExpenseTable expenses={this.state.expenseArray} onClick={this.handleDelete}/>
                     </div>
                 </div>
                 
