@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import DisplayIcons from './DisplayIcons';
 import DisplayUserInputArea from './DisplayUserInputArea';
-
+import Title from './title';
+import ExpenseTable from './ExpenseTable';
 
 class Main extends Component {
     constructor(props){
@@ -30,11 +31,16 @@ class Main extends Component {
 
     let total= parseInt(this.state.expenses) + parseInt(amount);
     let balance= parseInt(this.state.budget) - total
+    
+    let obj={
+        name:item,
+        amount: amount
+    }
 
     this.setState({
         expenses: total,
         balance: balance,
-        expenseArray: [...this.state.expenseArray,item]
+        expenseArray: [...this.state.expenseArray,obj]
     })
     
     console.log(this.state.expenseArray)
@@ -42,16 +48,26 @@ class Main extends Component {
 
     render (){
         return (
-            <div>
-                <DisplayIcons 
-                    budget={this.state.budget} 
-                    expenses={this.state.expenses}  
-                    balance={this.state.balance}  
-                />
-                <DisplayUserInputArea
-                    onClick={this.updateBudget}
-                    updateExpenses={this.updateExpenses}
-                 />
+            <div className='container-fluid'>
+                <div className='row'>
+                    <div className='col-12 col-md-5 mx-auto mt-5'>
+                        <Title />
+                        <DisplayUserInputArea
+                        onClick={this.updateBudget}
+                        updateExpenses={this.updateExpenses}
+                        />
+                    </div>
+                    <div className='col mt-3'>
+                        <DisplayIcons 
+                            budget={this.state.budget} 
+                            expenses={this.state.expenses}  
+                            balance={this.state.balance}  
+                        />
+                        <ExpenseTable expenses={this.state.expenseArray}/>
+                    </div>
+                </div>
+                
+                
             </div>
         )
     }
