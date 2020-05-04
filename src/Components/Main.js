@@ -35,7 +35,9 @@ class Main extends Component {
    }
 
    updateExpenses(item,amount){
-
+    if (!item || isNaN(amount) || !amount){
+        alert('Input a valid name and expense amount. Example: Student loan 250')
+    } else {
     let total= parseInt(this.state.expenses) + parseInt(amount);
     let balance= parseInt(this.state.budget) - total
     
@@ -52,6 +54,7 @@ class Main extends Component {
     })
     
     }
+}
     handleDelete(item){
         //deletes from expenseArray
         let newExpenseList= this.state.expenseArray;
