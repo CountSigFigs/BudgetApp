@@ -21,11 +21,17 @@ class Main extends Component {
     }
 
    updateBudget(amount){
+
+    if (isNaN(amount) || (!amount)){
+        alert('Input only numbers!')
+        return;
+    } else {
         let balance= parseInt(amount) - parseInt(this.state.expenses)
         this.setState({
             budget: amount,
             balance: balance
         })
+        }
    }
 
    updateExpenses(item,amount){
