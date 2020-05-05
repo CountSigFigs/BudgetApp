@@ -36,8 +36,8 @@ class UserBudget extends Component {
                     >
                     </Input>
                     <Button 
+                        className="hoverOverGreen mt-3"
                         style={{backgroundColor:'#228B22'}}
-                        className='mt-3' 
                         onClick={()=>{
                             this.props.onClick(this.state.budget);
                             this.resetForm()

@@ -59,7 +59,7 @@ class UserExpenses extends Component {
                     </Input>
                     <Button 
                         style={{backgroundColor: '#DC143C'}}
-                        className='mt-3' 
+                        className='hoverOverRed mt-3' 
                         onClick={()=>{
                             this.props.updateExpenses(this.state.expenseItem,this.state.expenses)
                             this.resetForm()
