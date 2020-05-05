@@ -33,7 +33,7 @@ class UserExpenses extends Component {
 
     render() {
         return (
-            <Form className="mt-3">
+            <Form className="mt-3" style={{color: '#DC143C'}}>
                 <FormGroup>
                     <Label for="userExpenseTitle"><h4>Enter Expense Name</h4></Label>
                     <Input
@@ -58,6 +58,7 @@ class UserExpenses extends Component {
                     >
                     </Input>
                     <Button 
+                        style={{backgroundColor: '#DC143C'}}
                         className='mt-3' 
                         onClick={()=>{
                             this.props.updateExpenses(this.state.expenseItem,this.state.expenses)

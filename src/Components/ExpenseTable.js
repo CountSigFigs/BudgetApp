@@ -18,9 +18,9 @@ function ExpenseTable (props){
     return(
         <div className='container'>
             <div className='row'>
-                <div className='col mt-3 text-center'>
+                <div className='col mt-3 text-center iconBox p-3' style={{color:'#4169E1'}}>
                     <h3>Your Expenses</h3>
-                    <Table>
+                    <Table style={{color:'#4169E1'}}>
                         <thead>
                             <tr>
                                 <th>Expense Name</th>

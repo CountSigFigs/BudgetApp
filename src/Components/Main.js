@@ -19,7 +19,7 @@ class Main extends Component {
         this.handleDelete=this.handleDelete.bind(this)
 
     }
-
+    //updates the budget amount and checks for user errors
    updateBudget(amount){
 
     if (isNaN(amount) || (!amount)){
@@ -34,6 +34,7 @@ class Main extends Component {
         }
    }
 
+   //updates expense amount checks for user errors
    updateExpenses(item,amount){
     if (!item || isNaN(amount) || !amount){
         alert('Input a valid name and expense amount. Example: Student loan 250')
@@ -41,12 +42,12 @@ class Main extends Component {
     let total= parseInt(this.state.expenses) + parseInt(amount);
     let balance= parseInt(this.state.budget) - total
     
-    //creates newobject to be added to expense array
+    //creates new object to be added to expense array
     let obj={
         name:item,
         amount: amount
     }
-
+    
     this.setState({
         expenses: total,
         balance: balance,
@@ -55,8 +56,8 @@ class Main extends Component {
     
     }
 }
+    //handles the delete function from expense array
     handleDelete(item){
-        //deletes from expenseArray
         let newExpenseList= this.state.expenseArray;
         let index = newExpenseList.indexOf(item);
         newExpenseList.splice(index,1);

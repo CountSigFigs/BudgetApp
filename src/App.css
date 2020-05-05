@@ -1,9 +1,13 @@
+body{
+  background-image: url(./Images/background.svg);
+  font-family: 'Oxygen', sans-serif;
+}
+
 h1{
   font-size: 64px;
 }
 
 h1,h3{
-  color: #375e97;
   font-weight: bold;
 }
 
@@ -19,4 +23,11 @@ h1,h3{
 
 .clickMe:hover{
   cursor: pointer;
+}
+
+.iconBox{
+  background-color: whitesmoke;
+  opacity: 0.9;
+  border-radius: 5px;
+  border: none;
 }

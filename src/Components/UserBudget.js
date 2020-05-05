@@ -23,7 +23,7 @@ class UserBudget extends Component {
 
     render() {
         return (
-            <Form className="mt-3" >
+            <Form className="mt-3" style={{color:'#228B22'}}>
                 <FormGroup>
                     <Label for="userBudget"><h4>Enter Budget</h4></Label>
                     <Input
@@ -36,6 +36,7 @@ class UserBudget extends Component {
                     >
                     </Input>
                     <Button 
+                        style={{backgroundColor:'#228B22'}}
                         className='mt-3' 
                         onClick={()=>{
                             this.props.onClick(this.state.budget);
