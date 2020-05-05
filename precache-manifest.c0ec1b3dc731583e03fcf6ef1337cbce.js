@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6bcdc8370b572fc68e2f96be996db9a",
+    "revision": "7d2aa676431fa8f7c0e473c8a4c8a74b",
     "url": "/BudgetApp/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BudgetApp/static/css/2.49354865.chunk.css"
   },
   {
-    "revision": "2f0d4a91cde7db2e967d",
-    "url": "/BudgetApp/static/css/main.d1d3bcaf.chunk.css"
+    "revision": "ff889aa8ab295fa4b4c8",
+    "url": "/BudgetApp/static/css/main.0540c0d1.chunk.css"
   },
   {
     "revision": "ee21b2a4aaa0b13e5d7b",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BudgetApp/static/js/2.de01533a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2f0d4a91cde7db2e967d",
+    "revision": "ff889aa8ab295fa4b4c8",
     "url": "/BudgetApp/static/js/main.9ef2f334.chunk.js"
   },
   {
