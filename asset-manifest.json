@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BudgetApp/static/css/main.0540c0d1.chunk.css",
+    "main.css": "/BudgetApp/static/css/main.84f6a96a.chunk.css",
     "main.js": "/BudgetApp/static/js/main.9ef2f334.chunk.js",
     "main.js.map": "/BudgetApp/static/js/main.9ef2f334.chunk.js.map",
     "runtime-main.js": "/BudgetApp/static/js/runtime-main.373dc8d7.js",
@@ -9,19 +9,19 @@
     "static/js/2.de01533a.chunk.js": "/BudgetApp/static/js/2.de01533a.chunk.js",
     "static/js/2.de01533a.chunk.js.map": "/BudgetApp/static/js/2.de01533a.chunk.js.map",
     "index.html": "/BudgetApp/index.html",
-    "precache-manifest.c0ec1b3dc731583e03fcf6ef1337cbce.js": "/BudgetApp/precache-manifest.c0ec1b3dc731583e03fcf6ef1337cbce.js",
+    "precache-manifest.21c843e02bb40489cb9a7f7e69fbe69a.js": "/BudgetApp/precache-manifest.21c843e02bb40489cb9a7f7e69fbe69a.js",
     "service-worker.js": "/BudgetApp/service-worker.js",
     "static/css/2.49354865.chunk.css.map": "/BudgetApp/static/css/2.49354865.chunk.css.map",
-    "static/css/main.0540c0d1.chunk.css.map": "/BudgetApp/static/css/main.0540c0d1.chunk.css.map",
+    "static/css/main.84f6a96a.chunk.css.map": "/BudgetApp/static/css/main.84f6a96a.chunk.css.map",
     "static/js/2.de01533a.chunk.js.LICENSE.txt": "/BudgetApp/static/js/2.de01533a.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/BudgetApp/static/media/background2.a1e509fb.svg",
+    "static/media/App.css": "/BudgetApp/static/media/Pattern-Randomized.6509a769.svg",
     "static/media/font-awesome.css": "/BudgetApp/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.373dc8d7.js",
     "static/css/2.49354865.chunk.css",
     "static/js/2.de01533a.chunk.js",
-    "static/css/main.0540c0d1.chunk.css",
+    "static/css/main.84f6a96a.chunk.css",
     "static/js/main.9ef2f334.chunk.js"
   ]
 }
